@@ -120,6 +120,7 @@ function getLocation() {
     }
     else {
         //HW - show an alert for no gelolocation support available
+        alert("No geolocation found");
     }
 }
 
@@ -165,6 +166,7 @@ async function fetchSearchWeatherInfo(city) {
         renderWeatherInfo(data);
     }
     catch(err) {
-        //hW
+        alert("City not found!");
+        loadingScreen.classList.remove("active");
     }
 }
